@@ -5,7 +5,7 @@ from __future__ import print_function
 
 import telegram
 from telegram.ext import Updater, CommandHandler
-from secrets import TELEGRAM_BOT_TOKEN
+from secrets import TELEGRAM_ROBOT_TOKEN
 
 import operator
 import logging
@@ -69,7 +69,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-updater = Updater(TELEGRAM_BOT_TOKEN)
+updater = Updater(TELEGRAM_ROBOT_TOKEN)
 updater.dispatcher.add_handler(CommandHandler('hello', helloAction))
 updater.dispatcher.add_handler(CommandHandler('salut', salutAction))
 updater.dispatcher.add_handler(CommandHandler('menu', menuAction, pass_args=True))
